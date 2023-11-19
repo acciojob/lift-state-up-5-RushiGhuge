@@ -1,6 +1,7 @@
 
 import React, { useState } from "react";
 import './../styles/App.css';
+// import { set } from "cypress/types/lodash";
 
 const App = () => {
 
@@ -13,11 +14,14 @@ const App = () => {
 
       {isLoging ? <h4>You are logged in</h4> :
 
-        <div className="form">
+        <form onSubmit={(e) => {
+          e.preventDefault();
+          setIsLoggin(true);
+        }} className="form">
           <div> UserName : <input type="text" placeholder="Username" /> </div>
           <div> Password : <input type="text" placeholder="Password" /> </div>
-          <div> <button onClick={() => setIsLoggin(true)}>Submit</button> </div>
-        </div>
+          <div> <button type="submit">Submit</button> </div>
+        </form>
 
       }
 
