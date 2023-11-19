@@ -11,7 +11,8 @@ const App = () => {
   return (
     <div>
       {/* Do not remove the main div */}
-      <h1>Parent Componant</h1>
+      <h1>Parent Component</h1>
+      {/* 'Parent Component' */}
       {isLoging ? <h4>You are logged in</h4> :
 
         <form onSubmit={(e) => {
